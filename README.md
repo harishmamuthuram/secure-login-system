@@ -15,7 +15,7 @@ their stored hashes will differ.
 
 ## How to run
 1. Clone the repo
-2. Run: login system with SHA-256 hashing.py
+2. Run: python login_system.py
 3. Choose register or login
 
 ## What I learned
