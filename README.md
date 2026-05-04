@@ -45,4 +45,4 @@ login system with SHA-256 hashing.py
 
 ## Built as part of
 
-A self-directed cybersecurity roadmap focused on understanding how real authentication systems protect user data — moving beyond surface-level security knowledge into actual implementation.
+A self-directed understanding of how real authentication systems protect user data — moving beyond surface-level security knowledge into actual implementation.
