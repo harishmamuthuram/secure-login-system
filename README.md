@@ -31,7 +31,7 @@ No external libraries — uses Python's built-in `hashlib`.
 ## Usage
 
 ```bash
-python login_system.py
+login system with SHA-256 hashing.py
 ```
 
 ---
