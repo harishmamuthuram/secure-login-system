@@ -1,24 +1,48 @@
-# Secure Login System (SHA-256)
+# secure-login-system
 
-A Python-based login system that implements secure password storage 
-using SHA-256 hashing and salting.
+A Python terminal app that implements secure password storage using SHA-256 hashing and salting — no plaintext passwords, ever.
 
-## What it does
-Users can register and log in through the terminal. The system locks 
-accounts after 3 failed login attempts to prevent brute-force attacks.
+![Python](https://img.shields.io/badge/Python-3.x-blue) ![Security](https://img.shields.io/badge/hashing-SHA--256-red)
 
-## How the security works
-Passwords are never stored directly. Instead, each password is combined 
-with a unique random salt and passed through SHA-256, producing a fixed 
-64-character fingerprint. Even if two users share the same password, 
-their stored hashes will differ.
+---
 
-## How to run
-1. Clone the repo
-2. Run: python login_system.py
-3. Choose register or login
+## Features
+- Register and log in through the terminal
+- Passwords are never stored — only their salted SHA-256 hash is saved
+- Unique salt per user means identical passwords produce different hashes
+- Account locks after 3 failed login attempts to block brute-force attacks
 
-## What I learned
-Built this to move beyond surface-level security knowledge — implementing 
-hashing, salting, and brute-force protection from scratch gave me a 
-practical understanding of how real authentication systems protect user data.
+---
+
+## How it works
+
+1. **Register** — a random salt is generated, combined with your password, and hashed via SHA-256
+2. **Login** — the same salt + hash process runs on input and is compared to the stored hash
+3. **Lockout** — 3 wrong attempts and the account is locked, no further tries allowed
+
+---
+
+## Requirements
+
+No external libraries — uses Python's built-in `hashlib`.
+
+---
+
+## Usage
+
+```bash
+python login_system.py
+```
+
+---
+
+## ⚠️ Important
+
+- This is a learning project — not production-ready authentication
+- Run inside a VM or isolated environment
+
+---
+
+## Built as part of
+
+A self-directed cybersecurity roadmap focused on understanding how real authentication systems protect user data — moving beyond surface-level security knowledge into actual implementation.
